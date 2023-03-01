@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="BookAppointbind"></data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical">
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_gravity="center"
+                android:background="@drawable/user"
+            android:layout_margin="@dimen/_10sdp"
+            app:civ_border_color="#a093ff"
+            app:civ_border_width="@dimen/_5sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtName"
+                style="@style/textStyleWhite"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_12ssp" />
+
+            <CalendarView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/simpleCalendarView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_220sdp"
+                android:focusedByDefault="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvsubList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:reverseLayout="true"
+                        android:background="@color/transparent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        tools:listitem="@layout/item_booking_list" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_loader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                    </ProgressBar>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <ProgressBar
+                    android:id="@+id/pb_appoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                </ProgressBar>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/btnReject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/rounded_purplebox"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:visibility="visible">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Book Appointment"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

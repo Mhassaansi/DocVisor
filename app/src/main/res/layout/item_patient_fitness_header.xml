@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgLastActivityUser"
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/rounded_purplebox" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/lblListHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+
+            android:text="Today"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12ssp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/colorPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dropDowm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:backgroundTint="@color/colorPrimary"
+            android:rotation="270"
+            android:background="@drawable/dropdown" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>
+

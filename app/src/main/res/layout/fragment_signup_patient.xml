@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/images"
+                    app:civ_border_color="#a093ff"
+                    app:civ_border_width="@dimen/_8sdp"
+                    tools:ignore="MissingConstraints" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgCamera"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/camera"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_30sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/relative"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtFullNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:startIconDrawable="@drawable/profile"
+                    app:startIconTint="@color/white">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Full Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_12ssp"
+
+                        tools:ignore="MissingConstraints" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtEmailLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtFullNameLayout"
+                    app:startIconDrawable="@drawable/email"
+                    app:startIconTint="@color/white">
+
+                    <!--
+                                        android:text="m@getnada.com"
+                    -->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Email Address"
+
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        tools:ignore="MissingConstraints" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txPassLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:passwordToggleEnabled="true"
+
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtEmailLayout"
+                    app:startIconDrawable="@drawable/password"
+                    app:startIconTint="@color/white">
+
+                    <!--
+                                        android:text="m@getnada.com"
+                    -->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Password"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_12ssp">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txPassConfirmLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:passwordToggleEnabled="true"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txPassLayout"
+                    app:startIconDrawable="@drawable/password"
+                    app:startIconTint="@color/white">
+
+                    <!--
+                                        android:text="m@getnada.com"
+                    -->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtConfirmPass"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Confirm Password"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_12ssp">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/genderSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txPassConfirmLayout"
+                    app:startIconDrawable="@drawable/profession"
+                    app:startIconTint="@color/white">
+
+                    <!--
+                                        android:text="m@getnada.com"
+                    -->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:drawableEnd="@drawable/dropdown"
+                        android:editable="false"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Gender"
+                        android:imeOptions="actionNext"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        app:validateEmptyMessage="@{@string/invalidProfession}"
+                        app:validateMinLength="@{1}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/genderSpinner">
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtCalender"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:drawableStart="@drawable/calendar"
+                            android:drawablePadding="@dimen/_15sdp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="center|start"
+                            android:hint="Date of Birth"
+                            android:imeOptions="actionNext"
+                            android:paddingStart="@dimen/_14sdp"
+
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dp"
+                            android:background="#A926204C" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_weight="0.5"
+                        android:textColorHint="@color/white"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeWidth="1dp"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                        app:hintTextColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtFullNameLayout"
+                        app:startIconTint="@color/white">
+
+                        <!--
+                                            android:text="m@getnada.com"
+                        -->
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/txtAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@android:color/transparent"
+                            android:editable="false"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Age"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            tools:ignore="MissingConstraints" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtWeightLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/txtHeightLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/layout"
+                    app:startIconDrawable="@drawable/fitness"
+                    app:startIconTint="@color/white">
+
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Weight (kg)"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_12ssp"
+
+                        />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtHeightLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtWeightLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/layout"
+                    app:startIconDrawable="@drawable/ic_baseline_height_24"
+                    app:startIconTint="@color/white">
+
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Height (cm)"
+
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_12ssp"
+
+                        />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_showFlag="false"
+                    app:ccp_dialogTextColor="@color/black"
+                    app:ccp_textColor="@color/white"
+                    app:ccp_defaultNameCode="us"
+                    app:layout_constraintTop_toTopOf="@id/txtPhoneLayout"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtPhoneLayout"
+                    app:layout_constraintBottom_toBottomOf="@id/txtPhoneLayout"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtPhoneLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/ccp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtHeightLayout"
+                    app:startIconDrawable="@drawable/password"
+                    app:startIconTint="@color/white">
+
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Phone Number"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnSignUp"
+                    style="@style/buttonStyle"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="SIGNUP"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtPhoneLayout"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/pb_signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="20dp"
+                    android:indeterminateTint="@color/white"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="@id/btnSignUp"
+                    app:layout_constraintRight_toRightOf="@id/btnSignUp"
+                    app:layout_constraintTop_toTopOf="@id/btnSignUp"
+                    app:layout_constraintBottom_toBottomOf="@id/btnSignUp">
+
+                </ProgressBar>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_15sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_15sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border_blue"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/textStyleWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="AGREEMENT"
+                    android:textSize="@dimen/_15ssp" />
+
+
+            </RelativeLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/colorAccent"
+                android:layout_margin="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/white"
+                    android:text="I have read and agreed with"
+                    android:textSize="@dimen/_12ssp" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layoutCheck"
+                    android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkTerm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/term"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/white"
+                        android:text="Terms and Conditions"
+                        android:textSize="@dimen/_12ssp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkPrivacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/privacy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/white"
+                        android:text="Privacy Policy"
+                        android:textSize="@dimen/_12ssp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/btnAccept"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_purplebox"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtForgetPass"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="35dp">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ACCEPT"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/btnReject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_whitebox"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtForgetPass"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="35dp">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="REJECT"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="@dimen/_15ssp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

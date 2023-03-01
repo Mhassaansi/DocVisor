@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_gradient"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/cancel" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_25sdp">
+
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/user"
+                    app:civ_border_color="#a093ff"
+                    app:civ_border_width="@dimen/_5sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="-40dp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/img"
+                   >
+
+                    <ImageView
+                        android:id="@+id/imgLastActivityUser"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/edit"
+
+                        />
+
+
+                </RelativeLayout>
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="-30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/img"
+                    android:src="@drawable/change"
+                    app:civ_border_width="@dimen/_1sdp" />-->
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtName"
+                    style="@style/textStyleWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtEmail"
+                    style="@style/textStyleWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/_10ssp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fillViewport="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_border_blue"
+                android:backgroundTint="@color/bg"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/doctorLeftSideMenu"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/txtHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/homenav" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Home" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/doctortxtAppointment"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/appointment" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Appointment" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/txtProfile"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/usersidemenue" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Profile" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/txtAlarm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/alarms" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Alarms" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/txtChat"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/chat" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Chat" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/txtSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:background="@drawable/rounded_purplebox"
+
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/settings" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Settings" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/txtReset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:background="@drawable/rounded_purplebox"
+
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/password"
+                            app:tint="#7078E3" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Reset Password" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                     <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/docsubscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                         android:visibility="gone"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                         android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/subscriptions_menu" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Subscription" />
+
+
+
+                     </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/schtHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/schedulemenu" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Schedule" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+<!--
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/txtdata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/schedulemenu" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Data" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+-->
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/txtDelete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/delete"
+                            app:tint="#8049fe" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Delete Account" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/txtLogout"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/logout" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Logout" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:visibility="gone"
+                    android:id="@+id/patientLeftSideMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patienttxtHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/homenav" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Home" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/doctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/invitedoctor" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Doctors List" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patienttxtProfile"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/usersidemenue" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Profile" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patienttxtAppointment"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/appointment" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Appointment" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patienttxtAlarm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/alarms" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Alarms" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patienttxtListDoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/alarms" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="List of Doctors" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patienttxtChat"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/chat" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Chat" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patienttxtInvite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:background="@drawable/rounded_purplebox"
+
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/invitedoctor" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Invite Doctor" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patientConnectWatch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:background="@drawable/rounded_purplebox"
+
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_watch_24"
+                            app:tint="#a093ff" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Watch Connectivity" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patienttxtSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:background="@drawable/rounded_purplebox"
+
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/settings" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Settings" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patienttxtReset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:background="@drawable/rounded_purplebox"
+
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/password"
+                            app:tint="#7078E3" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Reset Password" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <!-- <androidx.appcompat.widget.LinearLayoutCompat
+                         android:id="@+id/settingMore"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background=""
+                         android:orientation="vertical"
+                         android:visibility="visible">
+
+                         <androidx.appcompat.widget.LinearLayoutCompat
+                             android:id="@+id/txtChangePass"
+                             android:layout_marginTop="@dimen/_15sdp"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:orientation="horizontal"
+                             android:paddingStart="@dimen/_5sdp"
+                             android:paddingEnd="@dimen/_5sdp">
+
+                             <ImageView
+                                 android:layout_width="@dimen/_50sdp"
+                                 android:layout_height="wrap_content"
+                                 android:src="@drawable/lockicon" />
+
+                             <androidx.appcompat.widget.AppCompatTextView
+                                 style="@style/textStyleMenu"
+                                 android:text="Reset Password" />
+                         </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                     </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+
+
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/subscriptiontxtHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/subscriptions_menu" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Subscription" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patienttxtdata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/schedulemenu" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Data" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/txtDocDelete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/delete"
+                            app:tint="#8049fe"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Delete Account" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/patienttxtLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/logout" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/textStyleMenu"
+                            android:text="Logout" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </ScrollView>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

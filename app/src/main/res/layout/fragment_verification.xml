@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <!--  <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:background="@drawable/background"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="We have sent you a six-digits verification code with instructions. Please follow the instructions to verify your account"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+            <!--    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/verification_code"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text=" and instructions. Please"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/follow_the_instructions_to_verify_your_email_address"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />-->
+
+            <!--<com.poovam.pinedittextfield.SquarePinField
+                android:id="@+id/etPinText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                app:cornerRadius="@dimen/_8sdp"
+                app:fieldColor="#707070"
+                app:highlightColor="@color/white"
+                app:noOfFields="6" />-->
+
+
+            <com.fictivestudios.docsvisor.widget.PinEntryEditText
+                android:id="@+id/etPinText"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:cursorVisible="false"
+                android:textColor="@color/white"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                app:pinLineColors="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/_20ssp"
+                app:pinAnimationType="popIn" />
+
+<ProgressBar
+    android:id="@+id/pb_otp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    >
+</ProgressBar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_85sdp"
+                    android:layout_height="@dimen/_85sdp"
+
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/rounded" />
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/circularProgressBar"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:visibility="visible"
+                    app:cpb_background_progressbar_color="#00000000"
+                    app:cpb_background_progressbar_width="0.5dp"
+                    app:cpb_progress_direction="to_left"
+                    app:cpb_progress_max="60"
+                    app:cpb_progressbar_color="@color/white"
+                    app:cpb_progressbar_width="@dimen/_5sdp"
+                    app:cpb_round_border="false" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/resend_code"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Didn't receive code?"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/txtResend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text=" Resend"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <!-- <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/resend_code"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                android:visibility="visible" />-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"/>
+
+        </LinearLayout>
+    <!--</ScrollView>-->
+</layout>

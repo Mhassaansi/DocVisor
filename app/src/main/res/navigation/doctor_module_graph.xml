@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/doctor_module_graph"
+    app:startDestination="@id/doctorPatientFragment">
+
+    <fragment
+        android:id="@+id/doctorPatientFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.DoctorPatientFragment"
+        android:label="DoctorPatientFragment" >
+        <action
+            android:id="@+id/action_doctorPatientFragment_to_doctorPatientProfile"
+            app:destination="@id/doctorPatientProfile" />
+        <action
+            android:id="@+id/action_doctorPatientFragment_to_leftSideMenuFragment"
+            app:destination="@id/leftSideMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorProfileFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.DoctorProfileFragment"
+        android:label="DoctorProfileFragment" />
+    <fragment
+        android:id="@+id/doctorSettingFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.DoctorSettingFragment"
+        android:label="DoctorSettingFragment" />
+
+    <fragment
+        android:id="@+id/chatlistDoctorFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.ChatlistDoctorFragment"
+        android:label="ChatlistDoctorFragment">
+    <argument
+        android:name="receiverUserId"
+        app:argType="string"
+        android:defaultValue=""
+        />
+
+        <action
+            android:id="@+id/action_chatlistDoctorFragment_to_messengerFragment"
+            app:destination="@id/messengerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorPatientProfile"
+        android:name="com.fictivestudios.docsvisor.fragment.DoctorPatientProfile"
+        android:label="DoctorPatientProfile" >
+        <action
+            android:id="@+id/action_doctorPatientProfile_to_doctorEditPatientProfile"
+            app:destination="@id/doctorEditPatientProfile" />
+        <action
+            android:id="@+id/action_doctorPatientProfile_to_doctorPatientTestFragment"
+            app:destination="@id/doctorPatientTestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorEditPatientProfile"
+        android:name="com.fictivestudios.docsvisor.fragment.DoctorEditPatientProfile"
+        android:label="DoctorEditPatientProfile" />
+    <fragment
+        android:id="@+id/alarmDoctorFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.AlarmDoctorFragment"
+        android:label="AlarmDoctorFragment" >
+        <action
+            android:id="@+id/action_alarmDoctorFragment_to_alarmSetFragment"
+            app:destination="@id/alarmSetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leftSideMenuFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.LeftSideMenuFragment"
+        android:label="LeftSideMenuFragment" >
+        <action
+            android:id="@+id/action_leftSideMenuFragment_to_chatlistDoctorFragment"
+            app:destination="@id/chatlistDoctorFragment" />
+        <action
+            android:id="@+id/action_leftSideMenuFragment_to_alarmDoctorFragment"
+            app:destination="@id/alarmDoctorFragment" />
+
+        <action
+            android:id="@+id/action_leftSideMenuFragment_to_doctorSettingFragment"
+            app:destination="@id/doctorSettingFragment" />
+        <action
+            android:id="@+id/action_leftSideMenuFragment_to_doctorProfileFragment"
+            app:destination="@id/doctorProfileFragment" />
+        <action
+            android:id="@+id/action_leftSideMenuFragment_to_resetPassFragment"
+            app:destination="@id/resetPassFragment" />
+        <action
+            android:id="@+id/action_leftSideMenuFragment_to_doctorPatientFragment"
+            app:destination="@id/doctorPatientFragment" />
+        <action
+            android:id="@+id/action_leftSideMenuFragment_to_doctorEditFragment"
+            app:destination="@id/doctorEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPassFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.ResetPassFragment"
+        android:label="ResetPassFragment" />
+    <fragment
+        android:id="@+id/doctorPatientTestFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.DoctorPatientTestFragment"
+        android:label="DoctorPatientTestFragment" />
+    <fragment
+        android:id="@+id/messengerFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.MessengerFragment"
+        android:label="MessengerFragment" />
+    <fragment
+        android:id="@+id/alarmSetFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.AlarmSetFragment"
+        android:label="AlarmSetFragment" />
+    <fragment
+        android:id="@+id/notificationDoctorFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.NotificationDoctorFragment"
+        android:label="NotificationDoctorFragment" />
+    <fragment
+        android:id="@+id/doctorEditFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.PatientEditFragment"
+        android:label="DoctorEditFragment" />
+    <fragment
+        android:id="@+id/audioFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.AudioFragment"
+        android:label="AudioFragment" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.VideoFragment"
+        android:label="VideoFragment" />
+    <fragment
+        android:id="@+id/symptomFragment2"
+        android:name="com.fictivestudios.docsvisor.fragment.SymptomFragment"
+        android:label="SymptomFragment" />
+    <fragment
+        android:id="@+id/patientSubFragment2"
+        android:name="com.fictivestudios.docsvisor.fragment.PatientSubFragment"
+        android:label="PatientSubFragment" />
+    <fragment
+        android:id="@+id/appointmentTaB"
+        android:name="com.fictivestudios.docsvisor.fragment.AppointmentTaB"
+        android:label="AppointmentTaB" >
+        <action
+            android:id="@+id/action_appointmentTaB_to_leftSideMenuFragment"
+            app:destination="@id/leftSideMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorListFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.DoctorListFragment"
+        android:label="DoctorListFragment" >
+        <action
+            android:id="@+id/action_doctorListFragment_to_appointmentTaB"
+            app:destination="@id/appointmentTaB" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestDoctorFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.RequestDoctorFragment"
+        android:label="RequestDoctorFragment" >
+        <action
+            android:id="@+id/action_requestDoctorFragment_to_appointmentTaB"
+            app:destination="@id/appointmentTaB" />
+    </fragment>
+    <fragment
+        android:id="@+id/subscription"
+        android:name="com.fictivestudios.docsvisor.fragment.Subscription"
+        android:label="Subscription" >
+        <action
+            android:id="@+id/action_subscription_to_leftSideMenuFragment"
+            app:destination="@id/leftSideMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weeklySchedule2"
+        android:name="com.fictivestudios.docsvisor.fragment.WeeklySchedule"
+        android:label="WeeklySchedule" >
+        <action
+            android:id="@+id/action_weeklySchedule2_to_leftSideMenuFragment"
+            app:destination="@id/leftSideMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/offDayAndTime2"
+        android:name="com.fictivestudios.docsvisor.fragment.OffDayAndTime"
+        android:label="OffDayAndTime" >
+        <action
+            android:id="@+id/action_offDayAndTime2_to_weeklySchedule2"
+            app:destination="@id/weeklySchedule2" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorDataFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.DoctorDataFragment"
+        android:label="DoctorDataFragment" />
+    <fragment
+        android:id="@+id/changePassFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.ChangePassFragment"
+        android:label="ChangePassFragment" />
+    <fragment
+        android:id="@+id/doctorEditProfileFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.DoctorEditProfileFragment"
+        android:label="DoctorEditProfileFragment" />
+    <fragment
+        android:id="@+id/loginFragment3"
+        android:name="com.fictivestudios.docsvisor.fragment.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/preLoginFragment2"
+        android:name="com.fictivestudios.docsvisor.fragment.PreLoginFragment"
+        android:label="PreLoginFragment" />
+</navigation>

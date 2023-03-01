@@ -1,0 +1,208 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+
+
+android {
+    compileSdkVersion 31
+
+
+    defaultConfig {
+        applicationId "com.fictivestudios.docsvisor"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1
+        multiDexEnabled true
+        versionName "1.0.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android {
+        buildFeatures {
+            dataBinding = true
+            viewBinding = true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'com.google.firebase:firebase-auth:19.4.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.poovam:pin-edittext-field:1.2.3'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation "com.squareup.retrofit2:converter-simplexml:2.3.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.mikhaellopez:rxanimation:1.0.0'
+    implementation 'com.mikhaellopez:circularprogressbar:3.0.3'
+    /*  implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
+          transitive = true
+      }*/
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.rayzone107:durationview:0.0.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
+    implementation 'com.github.kassisdion:ViewPagerWithIndicator:v1.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+   // implementation 'com.github.Zaid-Mirza:AttachmentManager:1.0.5'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.github.jaiselrahman:FilePicker:1.3.2'
+    implementation 'com.github.Ilhasoft:data-binding-validator:1.0.0'
+    implementation 'id.zelory:compressor:2.1.0'
+    implementation 'com.facebook.shimmer:shimmer:0.4.0'
+    implementation 'com.github.hamzaahmedkhan:ShimmerRecyclerView:v0.4.0'
+    implementation 'com.andreabaccega:android-form-edittext:1.3.5'
+
+    /* // Import the BoM for the Firebase platform
+     implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+     // Declare the dependencies for the Crashlytics and Analytics libraries
+     // When using the BoM, you don't specify versions in Firebase library dependencies
+     implementation 'com.google.firebase:firebase-crashlytics'
+     implementation 'com.google.firebase:firebase-analytics'*/
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When NOT using the BoM, you must specify versions in Firebase library dependencies
+    // implementation 'com.google.firebase:firebase-crashlytics:17.3.0'
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
+    implementation "com.github.skydoves:progressview:1.1.0"
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
+    implementation 'it.mike5v:viewmore-textview:1.1.3'
+    implementation 'com.github.AhmMhd:SeeMoreTextView-Android:1.0.0'
+    def camerax_version = "1.0.0"
+    def nav_version = "2.3.5"
+// CameraX core library using camera2 implementation
+    implementation "androidx.camera:camera-camera2:$camerax_version"
+// CameraX Lifecycle Library
+    implementation "androidx.camera:camera-lifecycle:$camerax_version"
+// CameraX View class
+    implementation "androidx.camera:camera-view:1.0.0-alpha24"
+
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    // Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
+
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
+
+    // Jetpack Compose Integration
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha03")
+    implementation 'com.github.joielechong:countrycodepicker:2.4.2'
+
+
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.mjn1369:prettydialog:1.0.4'
+    implementation 'com.google.android.libraries.places:places:1.1.0'
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+
+    implementation ('io.socket:socket.io-client:2.0.1') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+
+    // Retrofit & OkHttp
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.2"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
+
+    //coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:x.x.x"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:x.x.x"
+
+    //image picker
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.8'
+
+    //countrycode picker
+    implementation 'com.github.joielechong:countrycodepicker:2.4.2'
+
+    //qr scanner
+    implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
+
+    //permissions
+   // implementation 'com.guolindev.permissionx:permissionx:1.6.4'
+
+
+    //socket
+    implementation ('io.socket:socket.io-client:2.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+
+    //safe arguments for jetpack navigation
+
+//fcm
+    implementation 'com.google.firebase:firebase-messaging:23.0.6'
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    //agora video call
+    implementation 'io.agora.rtc:full-sdk:3.5.0'
+    //push auto start
+
+    implementation 'com.github.judemanutd:autostarter:1.0.3'
+
+
+    //social login
+/*    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+
+    implementation 'com.google.firebase:firebase-core:21.1.0'
+    implementation 'com.google.firebase:firebase-common-ktx:20.1.1'*/
+}
+apply plugin: 'com.google.gms.google-services'

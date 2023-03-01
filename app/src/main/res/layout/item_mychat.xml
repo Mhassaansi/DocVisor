@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="ItemSendMsgBinding" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/laycolor"
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_my_chat"
+            >
+
+            <TextView
+                android:id="@+id/tv_message_sent"
+                android:elevation="@dimen/_2sdp"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/roboto_regular"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_media"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+
+                >
+
+            </ImageView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/_2sdp"
+            android:elevation="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="1"
+            android:textColor="@color/item_text"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="visible" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

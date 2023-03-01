@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_module_graph"
+    app:startDestination="@id/preLoginFragment">
+
+    <fragment
+        android:id="@+id/preLoginFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.PreLoginFragment"
+        android:label="PreLoginFragment">
+        <action
+            android:id="@+id/action_preLoginFragment_to_selectUserFragment"
+            app:destination="@id/selectUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectUserFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.SelectUserFragment"
+        android:label="SelectUserFragment">
+        <action
+            android:id="@+id/action_selectUserFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.SignUpFragment"
+        android:label="SignUpFragment">
+        <action
+            android:id="@+id/action_signUpFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPassFragment"
+            app:destination="@id/forgotPassFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeActivityPateint"
+            app:destination="@id/homeActivityPateint" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPassFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.ForgotPassFragment"
+        android:label="ForgotPassFragment" />
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.VerificationFragment"
+        android:label="VerificationFragment">
+        <action
+            android:id="@+id/action_verificationFragment_to_successSubscriptionFragment"
+            app:destination="@id/successSubscriptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successSignupFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.SuccessSignupFragment"
+        android:label="SuccessSignupFragment">
+        <action
+            android:id="@+id/action_successSignupFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_successSignupFragment_to_homeActivityPateint"
+            app:destination="@id/homeActivityPateint" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.fictivestudios.docsvisor.activities.HomeActivity"
+        android:label="HomeActivity" />
+    <activity
+        android:id="@+id/homeActivityPateint"
+        android:name="com.fictivestudios.docsvisor.activities.HomeActivityPateint"
+        android:label="HomeActivityPateint" />
+    <fragment
+        android:id="@+id/successSubscriptionFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.SuccessSubscriptionFragment"
+        android:label="SuccessSubscriptionFragment">
+        <action
+            android:id="@+id/action_successSubscriptionFragment_to_successSignupFragment"
+            app:destination="@id/successSignupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupPatientFragment"
+        android:name="com.fictivestudios.docsvisor.fragment.SignupPatientFragment"
+        android:label="SignupPatientFragment" />
+    <fragment
+        android:id="@+id/resetPassFragment3"
+        android:name="com.fictivestudios.docsvisor.fragment.ResetPassFragment"
+        android:label="ResetPassFragment" />
+</navigation>

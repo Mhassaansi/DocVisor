@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="Subscriptionlist">
+
+    </data>
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp">
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvsubList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="@dimen/_10sdp"
+            tools:listitem="@layout/item_sub_list" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

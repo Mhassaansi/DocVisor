@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_20sdp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
+                app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+                tools:layout_editor_absoluteX="26dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtEmailLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:startIconDrawable="@drawable/email"
+                    app:startIconTint="@color/white">
+
+                    <!--
+                                        android:text="m@getnada.com"
+                    -->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Email Address"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                        app:validateEmptyMessage="@{@string/invalidEmail}"
+                        app:validateType='@{"email"}'
+                        tools:ignore="MissingConstraints" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txPassLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="1dp"
+                    android:text="Abcd@1234"
+                    app:passwordToggleEnabled="true"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtEmailLayout"
+                    app:startIconDrawable="@drawable/password"
+                    app:startIconTint="@color/white">
+
+                    <!--
+                                        android:text="m@getnada.com"
+                    -->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txtPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Password"
+
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        app:hintTextColor="@color/white"
+                        app:validateMinLength="@{8}"
+                        app:validateRegex='@{"((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%.]).{6,20})"}'
+                        app:validateRegexMessage="@{@string/regexErrorMessage}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/txtEmail"
+                                    style="@style/textStyle"
+                                    android:layout_width="match_parent"
+                                    android:drawableStart="@drawable/user"
+                                    android:drawablePadding="@dimen/_8sdp"
+                                    android:hint="Email Address"
+                                    android:text="m@getnada.com"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textEmailAddress"
+                                    app:validateEmptyMessage="@{@string/invalidEmail}"
+                                    app:validateType='@{"email"}'
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    tools:ignore="MissingConstraints" />
+                -->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnLogin"
+                    style="@style/buttonStyle"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="LOGIN"
+                    app:layout_constraintTop_toBottomOf="@+id/txPassLayout"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="35dp" />
+                <ProgressBar
+                    android:id="@+id/pb_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="20dp"
+                    android:indeterminateTint="@color/white"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="@id/btnLogin"
+                    app:layout_constraintRight_toRightOf="@id/btnLogin"
+                    app:layout_constraintTop_toTopOf="@id/btnLogin"
+                    app:layout_constraintBottom_toBottomOf="@id/btnLogin"
+                    >
+
+                </ProgressBar>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtForgetPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Forgot Password?"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/don_t_have_an_account"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/txtSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text=" SignUp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

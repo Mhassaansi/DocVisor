@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_20sdp"
+        tools:layout_editor_absoluteX="26dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtEmailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:textColorHint="@color/white"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/white"
+            app:boxStrokeWidth="1dp"
+            app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout"
+            app:hintTextColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+            app:startIconDrawable="@drawable/email"
+            app:startIconTint="@color/white">
+
+            <!--
+                                android:text="m@getnada.com"
+            -->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/roboto_regular"
+                android:hint="Enter Email Address"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:validateEmptyMessage="@{@string/invalidEmail}"
+                app:validateType='@{"email"}'
+                tools:ignore="MissingConstraints" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/txtEmailLayout"
+            app:layout_constraintRight_toRightOf="@+id/txtEmailLayout"
+            app:layout_constraintTop_toTopOf="@+id/txtEmailLayout"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEmailLayout"
+            >
+
+        </ProgressBar>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnReset"
+            style="@style/buttonStyle"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="GET CODE"
+            app:layout_constraintTop_toBottomOf="@+id/txtEmailLayout"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="33dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

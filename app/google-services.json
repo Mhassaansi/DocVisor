@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010995988404",
+    "project_id": "docsvisor-89d94",
+    "storage_bucket": "docsvisor-89d94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010995988404:android:dbea305e8ed3363a6214e1",
+        "android_client_info": {
+          "package_name": "com.fictivestudios.docsvisor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010995988404-b2halnni1m0lfessu6kb5mjsuc4nue6d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI6lWmSHUiOGbUqqr9KPHLFrnVOuNXTrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010995988404-b2halnni1m0lfessu6kb5mjsuc4nue6d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,121 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_height="wrap_content"
+        app:mode="same_level"
+        app:dragEdge="right">
+
+        <RelativeLayout
+            android:id="@+id/imgCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btn_delete"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/shape_circle"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/imgLastActivityUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/delete" />
+
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_purplebox"
+            android:orientation="horizontal"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_10sdp"
+            android:visibility="visible">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_patient"
+                        style="@style/textStyleWhite"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Alarm"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_12ssp" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_time_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:textColor="@color/item_text"
+                        android:textSize="@dimen/_10sdp" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_date_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:textColor="@color/item_text"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/item_text_new"
+                    android:textSize="@dimen/_10ssp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+</layout>

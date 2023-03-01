@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_15sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_15sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border_blue"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/textStyleWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="@dimen/_40sdp"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="Calibration"
+                    android:textSize="@dimen/_15ssp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/cancel" />
+
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="You need to measure  at least 3 set on watch, then calibrate the watch by providing benchmark values. Please make sure within two hours of first set of  measurement"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/blood_glucose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Blood Glucose (mg/dL)"
+                        android:textColor="@color/item_text"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_blood_gluco"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_purplebox"
+                            android:backgroundTint="@color/bg"
+                            android:gravity="start"
+                            android:padding="@dimen/_15sdp"
+                            android:textColor="@color/item_text_new"
+                            android:textSize="@dimen/_12ssp" />
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Diastolic Blood Pressure (mmHg)"
+                        android:textColor="@color/item_text"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_low_blood"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_purplebox"
+                            android:backgroundTint="@color/bg"
+                            android:gravity="start"
+                            android:padding="@dimen/_15sdp"
+                            android:textColor="@color/item_text_new"
+                            android:textSize="@dimen/_12ssp" />
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Systolic Blood Pressure(mmHg)"
+                        android:textColor="@color/item_text"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_high_blood"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_purplebox"
+                            android:backgroundTint="@color/bg"
+                            android:gravity="start"
+                            android:padding="@dimen/_15sdp"
+                            android:textColor="@color/item_text_new"
+                            android:textSize="@dimen/_12ssp" />
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Body Temperature(°F)"
+                        android:textColor="@color/item_text"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_temperature"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_purplebox"
+                            android:backgroundTint="@color/bg"
+                            android:gravity="start"
+                            android:padding="@dimen/_15sdp"
+                            android:textColor="@color/item_text_new"
+                            android:textSize="@dimen/_12ssp" />
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <ProgressBar
+                        android:id="@+id/pbcalib"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_gravity="center"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        >
+
+                    </ProgressBar>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/btn_calibrate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:background="@drawable/rounded_purplebox"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/txtForgetPass"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="35dp">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Calibrate"
+                            android:textColor="@color/white"
+
+                            android:textSize="@dimen/_15ssp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

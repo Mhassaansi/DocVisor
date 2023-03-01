@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:background="@drawable/background"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="80dp"
+                android:padding="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgLogo">
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompatEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_whitebox"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="63dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/emailprelogin" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/textStyleMenu"
+                        android:text="Sign-in with Email Address"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/roboto_regular"
+
+                        android:textColor="@color/white"
+                        app:fontFamily="More Fonts..." />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+
+                    android:id="@+id/linearLayoutCompatFb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:saveEnabled="false"
+                    android:clickable="false"
+                    android:visibility="gone"
+                    android:focusable="false"
+                    android:background="@drawable/rounded_whitebox"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompatEmail"
+                    tools:layout_editor_absoluteX="40dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/facebook" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/textStyleMenu"
+                        android:text="Sign-in with Facebook"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/roboto_regular"
+
+                        android:textColor="@color/white" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompatGoogle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_whitebox"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompatFb"
+                    tools:layout_editor_absoluteX="40dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/google" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/textStyleMenu"
+                        android:text="Sign-in with Google"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

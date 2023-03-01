@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_63sdp"
+    android:background="@drawable/rounded_border_blue"
+    android:backgroundTint="#66A7B1B6"
+    android:elevation="@dimen/_5sdp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="@drawable/rounded_border_blue"
+        android:backgroundTint="@color/bg"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/doctorHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/homeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/homenav"
+                android:tint="@color/colorPrimary" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/homeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Home"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_12ssp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/doctorProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/profImage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/profilenav"
+                android:tint="@color/item_text_new" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/profName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Profile"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_12ssp"
+                android:tint="@color/item_text_new" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+

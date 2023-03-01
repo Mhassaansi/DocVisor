@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6f64fe</color>
+    <color name="colorPrimaryDark">#9823fd</color>
+    <color name="colorAccent">#6d67fd</color>
+    <color name="pin_normal">#FFFFFF</color>  <!--6B767E-->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="bg">#edf8fe</color>
+    <color name="item_text_new">#6d7379</color>
+    <color name="item_text">#A7B1B6</color>
+    <color name="grey">#F6F6F6</color>
+    <color name="graphcolor">#fe42ab</color>
+
+
+    <color name="violet">#BA0BB1</color>
+    <color name="item_bg">#26204C</color>
+    <color name="dark_violet">#1E1D3D</color>
+    <color name="button_bg">#7302DA</color>
+    <color name="item_date_text">#9A97B4</color>
+    <color name="yellow">#DFCE42</color>
+    <color name="blue">#1878F3</color>
+    <color name="textColor">#b7b7b7</color>
+    <color name="heading">#616c80</color>
+    <color name="hintColor">#E1FFFFFF</color>
+    <color name="red">#E1E31515</color>
+<!--
+    <color name="transparent">#9AB3B5B6</color>
+-->
+    <color name="transparent">#40FFFFFF</color>
+    <color name="transparentBlack">#65000000</color>
+    <color name="transparentBlackFolder">#80000000</color>
+    <color name="transparentSub">#07FFFFFF</color>
+    <color name="clickOption">#1FB9FF</color>
+    <color name="colorBlueBg">#CE10CDE3</color>
+    <color name="menuitem">#757575</color>
+    <color name="menuitem1">#575454</color>
+    <color name="separater">#AEAEAE</color>
+    <color name="menuColor">#121212</color>
+    <color name="defaultColor">#04be03</color>
+    <color name="defaultText">#C0FBC2</color>
+    <color name="progressColor">#00ff02</color>
+    <color name="snackbar">#023559</color>
+    <color name="shimmer">#80473E81</color>
+
+    <color name="greycolor">#BFBFBF</color>
+</resources>
